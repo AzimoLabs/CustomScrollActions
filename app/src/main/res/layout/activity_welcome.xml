@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="customscrollactions.azimolabs.com.customscrollactions.ui.WelcomeScreenActivity">
+
+    <Button
+        android:id="@+id/btn_coordinator_layout_activity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/btn_enter_coordinator_layout_activity" />
+
+    <Button
+        android:id="@+id/btn_nested_scroll_view_activity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/btn_enter_nested_scroll_view_activity" />
+
+</LinearLayout>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CustomScrollActions</string>
-    <string name="btn_enter_coordinator_layout_activity">CoordinatorLayoutActivity</string>
+    <string name="btn_enter_coordinator_layout_activity">Coordinator_Layout Activity</string>
+    <string name="btn_enter_nested_scroll_view_activity">Nested_Scroll_View Activity</string>
 </resources>
