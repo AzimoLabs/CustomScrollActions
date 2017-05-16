@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CustomScrollActions</string>
+    <string name="btn_enter_coordinator_layout_activity">CoordinatorLayoutActivity</string>
+</resources>
