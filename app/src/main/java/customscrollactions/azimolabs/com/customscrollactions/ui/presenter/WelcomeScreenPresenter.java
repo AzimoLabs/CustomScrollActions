@@ -18,11 +18,11 @@ public class WelcomeScreenPresenter {
         this.navigator = navigator;
     }
 
-    public void onBtnCoordinatorLayoutActivityClicked() {
+    public void enterCoordinatorLayoutScreen() {
         navigator.navigateToCoordinatorLayoutActivity();
     }
 
-    public void onBtnNestedScrollViewActivity() {
+    public void enterNestedScrollView() {
         navigator.navigateToNestedScrollViewActivity();
     }
 }

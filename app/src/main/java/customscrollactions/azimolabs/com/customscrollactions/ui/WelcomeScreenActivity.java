@@ -30,14 +30,14 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         btnCoordinatorLayoutActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                welcomeScreenPresenter.onBtnCoordinatorLayoutActivityClicked();
+                welcomeScreenPresenter.enterCoordinatorLayoutScreen();
             }
         });
         btnNestedScrollViewActivity = (Button) findViewById(R.id.btn_nested_scroll_view_activity);
         btnNestedScrollViewActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                welcomeScreenPresenter.onBtnNestedScrollViewActivity();
+                welcomeScreenPresenter.enterNestedScrollView();
             }
         });
     }

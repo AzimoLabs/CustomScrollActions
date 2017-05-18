@@ -1,9 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="customscrollactions.azimolabs.com.customscrollactions.ui.NestedScrollViewActivity">
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tvText20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/placeholder"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
