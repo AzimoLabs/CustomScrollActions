@@ -4,12 +4,17 @@ package customscrollactions.azimolabs.com.customscrollactions.utils;
  * Created by F1sherKK on 18/05/2017.
  */
 
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.test.espresso.PerformException;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.espresso.util.HumanReadables;
+import android.support.v4.view.ViewCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.FrameLayout;
 
@@ -26,27 +31,43 @@ import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVi
 
 public class CustomScrollActions {
 
-    public static ViewAction scrollToViewInParent(final Class<? extends View> parentClass) {
+    public static ViewAction nestedScrollTo() {
         return new ViewAction() {
+
             @Override
             public Matcher<View> getConstraints() {
                 return Matchers.allOf(
-                        isDescendantOfA(isAssignableFrom(parentClass)),
+                        isDescendantOfA(isAssignableFrom(NestedScrollView.class)),
                         withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE));
             }
 
             @Override
             public String getDescription() {
-                return "Find parent with type " + parentClass + "" +
-                        "of matched view and programmatically scroll to it.";
+                return "Find parent with type " + NestedScrollView.class +
+                        " of matched view and programmatically scroll to it.";
             }
 
             @Override
             public void perform(UiController uiController, View view) {
                 try {
-                    double overshoot = 1.1;
-                    View parentView = findParentLayout(view, parentClass);
-                    parentView.scrollTo(0, (int) (view.getBottom() * overshoot));
+                    NestedScrollView nestedScrollView = (NestedScrollView)
+                            findFirstParentLayoutOfClass(view, NestedScrollView.class);
+                    if (nestedScrollView != null) {
+                        CoordinatorLayout coordinatorLayout =
+                                (CoordinatorLayout) findFirstParentLayoutOfClass(view, CoordinatorLayout.class);
+                        if (coordinatorLayout != null) {
+                            CollapsingToolbarLayout collapsingToolbarLayout =
+                                    findCollapsingToolbarLayoutChildIn(coordinatorLayout);
+                            if (collapsingToolbarLayout != null) {
+                                int toolbarHeight = collapsingToolbarLayout.getHeight();
+                                nestedScrollView.startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL);
+                                nestedScrollView.dispatchNestedPreScroll(0, toolbarHeight, null, null);
+                            }
+                        }
+                        nestedScrollView.scrollTo(0, view.getTop());
+                    } else {
+                        throw new Exception("Unable to find NestedScrollView parent.");
+                    }
                 } catch (Exception e) {
                     throw new PerformException.Builder()
                             .withActionDescription(this.getDescription())
@@ -59,7 +80,19 @@ public class CustomScrollActions {
         };
     }
 
-    private static View findParentLayout(View view, Class<? extends View> parentClass) {
+    private static CollapsingToolbarLayout findCollapsingToolbarLayoutChildIn(ViewGroup viewGroup) {
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            View child = viewGroup.getChildAt(i);
+            if (child instanceof CollapsingToolbarLayout) {
+                return (CollapsingToolbarLayout) child;
+            } else if (child instanceof ViewGroup) {
+                return findCollapsingToolbarLayoutChildIn((ViewGroup) child);
+            }
+        }
+        return null;
+    }
+
+    private static View findFirstParentLayoutOfClass(View view, Class<? extends View> parentClass) {
         ViewParent parent = new FrameLayout(view.getContext());
         ViewParent incrementView = null;
         int i = 0;
