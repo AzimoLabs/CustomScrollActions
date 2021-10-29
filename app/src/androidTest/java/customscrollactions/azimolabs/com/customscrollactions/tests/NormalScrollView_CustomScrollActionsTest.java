@@ -14,22 +14,22 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import customscrollactions.azimolabs.com.customscrollactions.R;
-import customscrollactions.azimolabs.com.customscrollactions.ui.NestedScrollViewActivity;
+import customscrollactions.azimolabs.com.customscrollactions.ui.NormalScrollViewActivity;
 
 /**
  * Created by F1sherKK on 18/05/2017.
  */
 
 @RunWith(AndroidJUnit4.class)
-public class NestedScrollView_CustomScrollActionsTest {
+public class NormalScrollView_CustomScrollActionsTest {
 
     @Before
     public void setUp() {
-        ActivityScenario.launch(NestedScrollViewActivity.class);
+        ActivityScenario.launch(NormalScrollViewActivity.class);
     }
 
     @Test
-    public void useCustomNestedScrollAction() {
+    public void fallbackToNativeScroll() {
         onView(withId(R.id.tvText1))
                 .perform(scrollTo())
                 .check(matches(isCompletelyDisplayed()));

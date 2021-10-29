@@ -10,17 +10,16 @@ import customscrollactions.azimolabs.com.customscrollactions.R;
  * Created by F1sherKK on 16/05/2017.
  */
 
-public class NestedScrollViewActivity extends Activity {
+public class NormalScrollViewActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nested);
+        setContentView(R.layout.activity_normal);
     }
 
     public static void openActivity(Activity activity) {
-        Intent intent = new Intent(activity, NestedScrollViewActivity.class);
+        Intent intent = new Intent(activity, NormalScrollViewActivity.class);
         activity.startActivity(intent);
     }
-
 }

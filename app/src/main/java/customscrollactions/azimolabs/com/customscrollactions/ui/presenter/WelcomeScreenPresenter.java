@@ -1,7 +1,9 @@
 package customscrollactions.azimolabs.com.customscrollactions.ui.presenter;
 
+import customscrollactions.azimolabs.com.customscrollactions.ui.CoordinatorLayoutActivity;
+import customscrollactions.azimolabs.com.customscrollactions.ui.NestedScrollViewActivity;
+import customscrollactions.azimolabs.com.customscrollactions.ui.NormalScrollViewActivity;
 import customscrollactions.azimolabs.com.customscrollactions.ui.WelcomeScreenActivity;
-import customscrollactions.azimolabs.com.customscrollactions.ui.navigation.WelcomeScreenNavigator;
 
 /**
  * Created by F1sherKK on 16/05/2017.
@@ -10,19 +12,20 @@ import customscrollactions.azimolabs.com.customscrollactions.ui.navigation.Welco
 public class WelcomeScreenPresenter {
 
     private WelcomeScreenActivity view;
-    private WelcomeScreenNavigator navigator;
 
-    public WelcomeScreenPresenter(WelcomeScreenActivity view,
-                                  WelcomeScreenNavigator navigator) {
+    public WelcomeScreenPresenter(WelcomeScreenActivity view) {
         this.view = view;
-        this.navigator = navigator;
     }
 
     public void enterCoordinatorLayoutScreen() {
-        navigator.navigateToCoordinatorLayoutActivity();
+        CoordinatorLayoutActivity.openActivity(view);
     }
 
     public void enterNestedScrollView() {
-        navigator.navigateToNestedScrollViewActivity();
+        NestedScrollViewActivity.openActivity(view);
+    }
+
+    public void enterNormalScrollView() {
+        NormalScrollViewActivity.openActivity(view);
     }
 }
