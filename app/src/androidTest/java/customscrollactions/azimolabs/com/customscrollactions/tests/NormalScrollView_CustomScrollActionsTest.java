@@ -14,7 +14,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import customscrollactions.azimolabs.com.customscrollactions.R;
-import customscrollactions.azimolabs.com.customscrollactions.ui.NestedScrollViewActivity;
 import customscrollactions.azimolabs.com.customscrollactions.ui.NormalScrollViewActivity;
 
 /**
